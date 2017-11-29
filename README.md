@@ -38,4 +38,6 @@ Download the model for crnn from baidu yun:[here](https://pan.baidu.com/s/1nvBV5
 
 There are two methods to run this project.
 
-- If you want to recognize man
+- If you have many images to be recognized,you can put them into **imgs/** and run **python demo.py**
+
+- If you only have one or two images to be recognized,you can just run **python demo.py image1 image2 ...**
