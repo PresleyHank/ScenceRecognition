@@ -1,6 +1,6 @@
 # ScenceRecognition
 ### CTPN+CRNN
-This project is besed on [text-detection-ctpn](https://github.com/qq919056489/text-detection-ctpn) and [sceneReco](https://github.com/bear63/sceneReco).
+This project is besed on [text-detection-ctpn](https://github.com/qq919056489/text-detection-ctpn) and [sceneReco](https://github.com/bear63/sceneReco).Because I don't have a Nidia gpu,so this project is run on cpu mode.
 ## environment
 - [x]  ubuntu16.04
 
