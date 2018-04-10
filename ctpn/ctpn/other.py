@@ -70,7 +70,8 @@ def draw_boxes(im, bboxes, is_display=True, color=None, caption="Image", wait=Tr
         index = index + 1
         #cv2.rectangle(im, tuple(box[:2]), tuple(box[2:4]), c,2)
     if is_display:
-        cv2.imshow('result', im)
+        pass
+        # cv2.imshow('result', im)
         #if wait:
             #cv2.waitKey(0)
     return text_recs
@@ -118,4 +119,3 @@ class Graph:
                     v=np.where(self.graph[v, :])[0][0]
                     sub_graphs[-1].append(v)
         return sub_graphs
-

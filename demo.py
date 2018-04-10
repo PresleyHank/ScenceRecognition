@@ -2,6 +2,7 @@ from ctpn.ctpn.demo import CTPN
 from crnn.demo import *
 import sys,os
 import glob
+import matplotlib.pyplot as plt
 sys.path.append(os.getcwd())
 
 class CTPN_CRNN(object):
@@ -26,11 +27,13 @@ class CTPN_CRNN(object):
         img, text_recs = self.text_detection(ctpn,im)
         # 使用CRNN识别文本
         raw_preds, sim_preds = self.text_recognition(img, text_recs)
-
+        # cv2.waitKey(0)
         # 输出识别结果
         for i in range(len(raw_preds)):
             print("%s" % (sim_preds[i]))
         print("---------------------------------------------------------------")
+        plt.imshow(img)
+        plt.show()
 
 if __name__ == '__main__':
     ctpn_crnn = CTPN_CRNN()

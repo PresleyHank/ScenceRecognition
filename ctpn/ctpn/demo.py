@@ -52,8 +52,9 @@ class CTPN(object):
         for i in inds:
             bbox = line[i, :4]
             score = line[i, -1]
-            cv2.rectangle(im, (bbox[0], bbox[1]), (bbox[2], bbox[3]), color=(0, 255, 0), thickness=2)
+            cv2.rectangle(im, (bbox[0], bbox[1]), (bbox[2], bbox[3]), color=(0, 0, 255), thickness=2)
         im = cv2.resize(im, None, None, fx=1.0 / im_scale, fy=1.0 / im_scale, interpolation=cv2.INTER_LINEAR)
+        cv2.imshow("img",im)
         cv2.waitKey(0)
 
 
@@ -103,7 +104,7 @@ class CTPN(object):
         text_lines = self.connect_proposal(dets[:, :], dets[:, 4], im.shape[:2])
         tmp = im.copy()
         text_recs = draw_boxes(tmp,text_lines,caption="im_name",wait=True)
-        self.show_results(tmp,im_scale, text_recs, thresh=0.9)
+        # self.show_results(tmp,im_scale, text_recs, thresh=0.9)
         return tmp,text_recs
         # return get_textbox(im, im_scale, line, thresh=0.9)
         # save_results(im,im_scale, line,thresh=0.9)

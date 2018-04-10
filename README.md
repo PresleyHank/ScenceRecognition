@@ -36,6 +36,8 @@ Download the model for crnn from baidu yun:[here](https://pan.baidu.com/s/1nvBV5
 
 # Second
 
+Run install-cpu.sh , if there have some problem when run it , please open the file and execute single sentense.
+
 There are two methods to run this project.
 
 - If you have many images to be recognized,you can put them into **imgs/** and run **python demo.py**
