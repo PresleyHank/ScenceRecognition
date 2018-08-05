@@ -44,3 +44,6 @@ There are two methods to run this project.
 
 - If you only have one or two images to be recognized,you can just run **python demo.py image1 image2 ...**
 
+
+<img width="500" height="800" src="https://github.com/timekillmo/ScenceRecognition/1.png" />
+
