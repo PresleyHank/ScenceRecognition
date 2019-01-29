@@ -33,7 +33,7 @@ file|demo.py|the main function of this project
 
 # First
 
-Download the model for crnn from baidu yun:[here](https://pan.baidu.com/s/1nvBV5FV).Then put it into **crnn/models**
+Download the model for crnn from baidu yun:[here](https://pan.baidu.com/s/1hm6Gpy7pRYtouAcXUkWWwg).Then put it into **crnn/models**
 
 # Second
 
