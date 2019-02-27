@@ -7,12 +7,12 @@ sys.path.append(os.getcwd())
 
 class CTPN_CRNN(object):
 
-    # 文本检测
+    # text detection
     def text_detection(self,ctpn,im):
         img,text_recs = ctpn.get_text_box(im)
         return img, text_recs
 
-    # 文本识别
+    # text recognition
     def text_recognition(self,img, text_recs):
         model, converter = crnnSource()
         raw_preds, sim_preds = crnnRec(model=model, converter=converter, im=img, text_recs=text_recs)
@@ -21,14 +21,14 @@ class CTPN_CRNN(object):
     def do(self,ctpn,img_name):
         print("---------------------------------------------------------------")
         print("start to recognize : %s"%img_name)
-        # 读取图片
+        # read image
         im = cv2.imread(img_name)
-        # 利用CTPN检测文本块
+        # use CTPN to detect text block
         img, text_recs = self.text_detection(ctpn,im)
-        # 使用CRNN识别文本
+        # use CRNN to recongnize text
         raw_preds, sim_preds = self.text_recognition(img, text_recs)
         # cv2.waitKey(0)
-        # 输出识别结果
+        # output the result of recognize
         for i in range(len(raw_preds)):
             print("%s" % (sim_preds[i]))
         print("---------------------------------------------------------------")
