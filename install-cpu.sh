@@ -1,8 +1,8 @@
 #!/bin/bash
-#利用conda创建环境
+#create conda envirmonent
 conda create -n project_test python=3.6
 source activate project
-pip install easydict -i https://pypi.tuna.tsinghua.edu.cn/simple/ ##选择国内源，速度更快
+pip install easydict -i https://pypi.tuna.tsinghua.edu.cn/simple/ ##select china source
 pip install Cython opencv-python -i https://pypi.tuna.tsinghua.edu.cn/simple/
 pip install matplotlib -i https://pypi.tuna.tsinghua.edu.cn/simple/
 pip install -U pillow -i https://pypi.tuna.tsinghua.edu.cn/simple/
